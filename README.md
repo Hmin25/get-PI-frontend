@@ -1,70 +1,42 @@
-# Getting Started with Create React App
+# Purpose
+This project is to create a HTTP server and a simple webpage to conduct the calculation of the circumference of Sun.
+To start and access to this project, please refer to the steps below.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
 
-In the project directory, you can run:
+# Steps to start the project
+1. Open both "get-PI-frontend" and "get-PI-backend" in separated windows of any IDE (eg. Visual Studio Code).
 
-### `npm start`
+# For "get-PI-frontend"
+2. In the terminal, run "npm i" to install the packages.
+3. After the installation, run "npm start" to run the project as a client-side webpage on local.
+4. A local webpage with title of "Calculator of Sun Circumference" will be opened up on the browser (eg. Chrome).
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+# For "get-PI-backend"
+5. In the terminal, run "npm i" to install the packages.
+6. After the installation, run "nodemon index.js" to run a HTTP server on local.
+7. Now, the HTTP server is running on port 5000.
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+8. On browser, users can get the value of Pi and circumference of Sun by clicking the buttons provided.
+9. API will be fired to request the most accurate Pi value from server. 
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+# Further explanation (technical)
+First API: "/pi-value-v1", the formula is obtained from this link:
+http://ajennings.net/blog/a-million-digits-of-pi-in-9-lines-of-javascript.html
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Second API: "/pi-value-v2", calculates PI value based on the Taylor series from above link,
+I figured out the patterns and translated them into JavaScript code.
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+# Limitations
+1. Getting PI value one decimal point at a time is not feasible because fractional calculations give a lot of decimal points.
+2. To achieve the effect that is wanted in the task, we'll have to produce PI value with many decimal points first and then trim the decimal places to whatever we desire, but that might affect accuracy.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+# GitHub repo links
+1. get-PI-frontend: https://github.com/Hmin25/get-PI-frontend
+2. get-PI-backend: https://github.com/Hmin25/get-PI-backend
